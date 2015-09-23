@@ -307,6 +307,7 @@ public class JPushPlugin extends CordovaPlugin {
 		BasicPushNotificationBuilder builder = new BasicPushNotificationBuilder(
 				this.cordova.getActivity());
 		builder.developerArg0 = "Basic builder 1";
+		builder.notificationDefaults = Notification.DEFAULT_SOUND;
 		JPushInterface.setPushNotificationBuilder(1, builder);
 		JSONObject obj = new JSONObject();
 		try {
@@ -324,6 +325,7 @@ public class JPushPlugin extends CordovaPlugin {
 				R.id.icon, R.id.title, R.id.text);
 		builder.developerArg0 = "Custom Builder 1";
 		builder.layoutIconDrawable = R.drawable.jpush_notification_icon;
+		builder.notificationDefaults = Notification.DEFAULT_SOUND;
 		JPushInterface.setPushNotificationBuilder(2, builder);
 		JSONObject obj = new JSONObject();
 		try {
